@@ -60,11 +60,13 @@ function getCurrentRequest() {
 // src/index.ts
 import {
   init as coreInit,
-  patchNodeHttp as patchNodeHttp2
+  patchNodeHttp as patchNodeHttp2,
+  patchFetch
 } from "@outboundiq/core/node";
 function initExpress(config) {
   coreInit(config);
   patchNodeHttp2();
+  patchFetch();
   console.log("[OutboundIQ] Initialized for Express.js");
 }
 export {

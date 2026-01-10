@@ -88,6 +88,7 @@ var import_node3 = require("@outboundiq/core/node");
 function initExpress(config) {
   (0, import_node3.init)(config);
   (0, import_node3.patchNodeHttp)();
+  (0, import_node3.patchFetch)();
   console.log("[OutboundIQ] Initialized for Express.js");
 }
 // Annotate the CommonJS export names for ESM import in node:

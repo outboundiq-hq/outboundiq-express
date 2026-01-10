@@ -68,6 +68,7 @@ export {
 import { 
   init as coreInit,
   patchNodeHttp,
+  patchFetch,
 } from '@outboundiq/core/node';
 import type { OutboundIQConfig } from '@outboundiq/core';
 
@@ -101,8 +102,11 @@ export function initExpress(config: OutboundIQConfig): void {
   // Initialize the core client
   coreInit(config);
   
-  // Patch Node.js http/https modules
+  // Patch Node.js http/https modules (for axios, got, node-fetch, etc.)
   patchNodeHttp();
+  
+  // Patch global fetch (Node.js 18+ built-in fetch)
+  patchFetch();
   
   console.log('[OutboundIQ] Initialized for Express.js');
 }
