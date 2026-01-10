@@ -46,6 +46,17 @@ export {
   type ApiCall,
 } from '@outboundiq/core/node';
 
+// Re-export API Intelligence functions from core
+export {
+  recommend,
+  providerStatus,
+  endpointStatus,
+  type RecommendationResult,
+  type ProviderStatusResult,
+  type EndpointStatusResult,
+  type IntelligenceOptions,
+} from '@outboundiq/core';
+
 // Export Express-specific middleware
 export {
   userContextMiddleware,

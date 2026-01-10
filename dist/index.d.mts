@@ -1,6 +1,7 @@
 export { ApiCall, OutboundIQConfig, UserContext, flush, getClient, init, patchNodeHttp, setUserContext, setUserContextResolver, track, unpatchNodeHttp } from '@outboundiq/core/node';
-import { Request, Response, NextFunction } from 'express';
 import { UserContext, OutboundIQConfig } from '@outboundiq/core';
+export { EndpointStatusResult, IntelligenceOptions, ProviderStatusResult, RecommendationResult, endpointStatus, providerStatus, recommend } from '@outboundiq/core';
+import { Request, Response, NextFunction } from 'express';
 
 /**
  * Express middleware that captures the current request for user context tracking.

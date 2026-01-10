@@ -21,12 +21,15 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var index_exports = {};
 __export(index_exports, {
   default: () => initExpress,
+  endpointStatus: () => import_core.endpointStatus,
   flush: () => import_node2.flush,
   getClient: () => import_node2.getClient,
   getCurrentRequest: () => getCurrentRequest,
   init: () => import_node2.init,
   initExpress: () => initExpress,
   patchNodeHttp: () => import_node2.patchNodeHttp,
+  providerStatus: () => import_core.providerStatus,
+  recommend: () => import_core.recommend,
   setRequestUserContext: () => setRequestUserContext,
   setUserContext: () => import_node2.setUserContext,
   setUserContextResolver: () => import_node2.setUserContextResolver,
@@ -36,6 +39,7 @@ __export(index_exports, {
 });
 module.exports = __toCommonJS(index_exports);
 var import_node2 = require("@outboundiq/core/node");
+var import_core = require("@outboundiq/core");
 
 // src/middleware.ts
 var import_async_hooks = require("async_hooks");
@@ -88,12 +92,15 @@ function initExpress(config) {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  endpointStatus,
   flush,
   getClient,
   getCurrentRequest,
   init,
   initExpress,
   patchNodeHttp,
+  providerStatus,
+  recommend,
   setRequestUserContext,
   setUserContext,
   setUserContextResolver,

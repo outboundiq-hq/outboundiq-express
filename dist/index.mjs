@@ -9,6 +9,11 @@ import {
   unpatchNodeHttp,
   setUserContextResolver as setUserContextResolver2
 } from "@outboundiq/core/node";
+import {
+  recommend,
+  providerStatus,
+  endpointStatus
+} from "@outboundiq/core";
 
 // src/middleware.ts
 import { AsyncLocalStorage } from "async_hooks";
@@ -64,12 +69,15 @@ function initExpress(config) {
 }
 export {
   initExpress as default,
+  endpointStatus,
   flush,
   getClient,
   getCurrentRequest,
   init,
   initExpress,
   patchNodeHttp,
+  providerStatus,
+  recommend,
   setRequestUserContext,
   setUserContext,
   setUserContextResolver2 as setUserContextResolver,
