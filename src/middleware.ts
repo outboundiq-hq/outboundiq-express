@@ -67,7 +67,7 @@ function configureResolver(): void {
  * 
  * const app = express();
  * 
- * init({ apiKey: process.env.OUTBOUNDIQ_API_KEY });
+ * init({ apiKey: process.env.OUTBOUNDIQ_KEY });
  * 
  * // Add after your auth middleware (passport, etc.)
  * app.use(userContextMiddleware());

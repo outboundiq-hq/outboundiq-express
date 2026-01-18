@@ -17,7 +17,7 @@ import { Request, Response, NextFunction } from 'express';
  *
  * const app = express();
  *
- * init({ apiKey: process.env.OUTBOUNDIQ_API_KEY });
+ * init({ apiKey: process.env.OUTBOUNDIQ_KEY });
  *
  * // Add after your auth middleware (passport, etc.)
  * app.use(userContextMiddleware());
@@ -69,7 +69,7 @@ declare function getCurrentRequest(): Request | undefined;
  * const app = express();
  *
  * // Initialize OutboundIQ - patches fetch/http automatically
- * init({ apiKey: process.env.OUTBOUNDIQ_API_KEY });
+ * init({ apiKey: process.env.OUTBOUNDIQ_KEY });
  *
  * // Optional: track which user made each API call
  * app.use(userContextMiddleware());
@@ -101,11 +101,11 @@ declare function getCurrentRequest(): Request | undefined;
  * import { init } from '@outboundiq/express';
  *
  * // Minimal setup
- * init({ apiKey: process.env.OUTBOUNDIQ_API_KEY });
+ * init({ apiKey: process.env.OUTBOUNDIQ_KEY });
  *
  * // With options
  * init({
- *   apiKey: process.env.OUTBOUNDIQ_API_KEY,
+ *   apiKey: process.env.OUTBOUNDIQ_KEY,
  *   debug: true,
  *   batchSize: 20,
  * });

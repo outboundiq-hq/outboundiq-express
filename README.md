@@ -21,7 +21,7 @@ const { initExpress, userContextMiddleware } = require('@outboundiq/express');
 const app = express();
 
 // Initialize OutboundIQ - this patches fetch/http automatically
-initExpress({ apiKey: process.env.OUTBOUNDIQ_API_KEY });
+initExpress({ apiKey: process.env.OUTBOUNDIQ_KEY });
 
 // Optional: track which user made each API call
 app.use(userContextMiddleware());
@@ -63,7 +63,7 @@ This means **any** HTTP client library works automatically:
 ```javascript
 initExpress({
   // Required
-  apiKey: process.env.OUTBOUNDIQ_API_KEY,
+  apiKey: process.env.OUTBOUNDIQ_KEY,
   
   // Optional
   debug: false,           // Enable debug logging
@@ -165,7 +165,7 @@ import { initExpress, userContextMiddleware } from '@outboundiq/express';
 import type { OutboundIQConfig } from '@outboundiq/express';
 
 const config: OutboundIQConfig = {
-  apiKey: process.env.OUTBOUNDIQ_API_KEY!,
+  apiKey: process.env.OUTBOUNDIQ_KEY!,
   debug: true,
 };
 
@@ -177,7 +177,7 @@ initExpress(config);
 Verify your setup is working:
 
 ```bash
-OUTBOUNDIQ_API_KEY=your_api_key npx outboundiq-test
+OUTBOUNDIQ_KEY=your_api_key npx outboundiq-test
 ```
 
 This will:
@@ -189,7 +189,7 @@ This will:
 
 | Variable | Description |
 |----------|-------------|
-| `OUTBOUNDIQ_API_KEY` | Your OutboundIQ API key |
+| `OUTBOUNDIQ_KEY` | Your OutboundIQ API key |
 | `OUTBOUNDIQ_DEBUG` | Set to `true` for debug logging |
 
 ## Support
