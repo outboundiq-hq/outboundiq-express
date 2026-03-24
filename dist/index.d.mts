@@ -1,6 +1,6 @@
-export { ApiCall, OutboundIQConfig, UserContext, flush, getClient, init, patchNodeHttp, setUserContext, setUserContextResolver, track, unpatchNodeHttp } from '@outboundiq/core/node';
-import { UserContext, OutboundIQConfig } from '@outboundiq/core';
-export { EndpointStatusResult, IntelligenceOptions, ProviderStatusResult, RecommendationResult, endpointStatus, providerStatus, recommend } from '@outboundiq/core';
+export { ApiCall, OutboundIQConfig, UserContext, flush, getClient, init, patchNodeHttp, setUserContext, setUserContextResolver, track, unpatchNodeHttp } from '@outbound_iq/core/node';
+import { UserContext, OutboundIQConfig } from '@outbound_iq/core';
+export { EndpointStatusResult, IntelligenceOptions, ProviderStatusResult, RecommendationResult, endpointStatus, providerStatus, recommend } from '@outbound_iq/core';
 import { Request, Response, NextFunction } from 'express';
 
 /**

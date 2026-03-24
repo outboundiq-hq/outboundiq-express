@@ -8,19 +8,23 @@ import {
   patchNodeHttp,
   unpatchNodeHttp,
   setUserContextResolver as setUserContextResolver2
-} from "@outboundiq/core/node";
+} from "@outbound_iq/core/node";
 import {
   recommend,
   providerStatus,
   endpointStatus
-} from "@outboundiq/core";
+} from "@outbound_iq/core";
 
 // src/middleware.ts
 import { AsyncLocalStorage } from "async_hooks";
-import { setUserContextResolver } from "@outboundiq/core/node";
+import { setUserContextResolver } from "@outbound_iq/core/node";
 var requestStorage = new AsyncLocalStorage();
 var resolverConfigured = false;
 function extractUserContext(req) {
+  const manualContext = req.__outboundiq_context;
+  if (manualContext) {
+    return manualContext;
+  }
   const user = req.user;
   if (!user) {
     return null;
@@ -62,7 +66,7 @@ import {
   init as coreInit,
   patchNodeHttp as patchNodeHttp2,
   patchFetch
-} from "@outboundiq/core/node";
+} from "@outbound_iq/core/node";
 function initExpress(config) {
   coreInit(config);
   patchNodeHttp2();

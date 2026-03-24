@@ -1,7 +1,7 @@
 import { AsyncLocalStorage } from 'async_hooks';
 import type { Request, Response, NextFunction } from 'express';
-import { setUserContextResolver } from '@outboundiq/core/node';
-import type { UserContext } from '@outboundiq/core';
+import { setUserContextResolver } from '@outbound_iq/core/node';
+import type { UserContext } from '@outbound_iq/core';
 
 /**
  * AsyncLocalStorage to track the current request across async operations
@@ -17,6 +17,12 @@ let resolverConfigured = false;
  * Extract user context from Express request
  */
 function extractUserContext(req: Request): UserContext | null {
+  // Manual override takes precedence when explicitly provided.
+  const manualContext = (req as any).__outboundiq_context as UserContext | undefined;
+  if (manualContext) {
+    return manualContext;
+  }
+
   // Check for user on request (set by passport, express-session, etc.)
   const user = (req as any).user;
   

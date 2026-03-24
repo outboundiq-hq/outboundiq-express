@@ -44,7 +44,7 @@ export {
   type OutboundIQConfig,
   type UserContext,
   type ApiCall,
-} from '@outboundiq/core/node';
+} from '@outbound_iq/core/node';
 
 // Re-export API Intelligence functions from core
 export {
@@ -55,7 +55,7 @@ export {
   type ProviderStatusResult,
   type EndpointStatusResult,
   type IntelligenceOptions,
-} from '@outboundiq/core';
+} from '@outbound_iq/core';
 
 // Export Express-specific middleware
 export {
@@ -69,8 +69,8 @@ import {
   init as coreInit,
   patchNodeHttp,
   patchFetch,
-} from '@outboundiq/core/node';
-import type { OutboundIQConfig } from '@outboundiq/core';
+} from '@outbound_iq/core/node';
+import type { OutboundIQConfig } from '@outbound_iq/core';
 
 /**
  * Initialize OutboundIQ for Express.js

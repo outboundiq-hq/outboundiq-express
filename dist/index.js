@@ -38,15 +38,19 @@ __export(index_exports, {
   userContextMiddleware: () => userContextMiddleware
 });
 module.exports = __toCommonJS(index_exports);
-var import_node2 = require("@outboundiq/core/node");
-var import_core = require("@outboundiq/core");
+var import_node2 = require("@outbound_iq/core/node");
+var import_core = require("@outbound_iq/core");
 
 // src/middleware.ts
 var import_async_hooks = require("async_hooks");
-var import_node = require("@outboundiq/core/node");
+var import_node = require("@outbound_iq/core/node");
 var requestStorage = new import_async_hooks.AsyncLocalStorage();
 var resolverConfigured = false;
 function extractUserContext(req) {
+  const manualContext = req.__outboundiq_context;
+  if (manualContext) {
+    return manualContext;
+  }
   const user = req.user;
   if (!user) {
     return null;
@@ -84,7 +88,7 @@ function getCurrentRequest() {
 }
 
 // src/index.ts
-var import_node3 = require("@outboundiq/core/node");
+var import_node3 = require("@outbound_iq/core/node");
 function initExpress(config) {
   (0, import_node3.init)(config);
   (0, import_node3.patchNodeHttp)();
