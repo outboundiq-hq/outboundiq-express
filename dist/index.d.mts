@@ -13,7 +13,7 @@ import { Request, Response, NextFunction } from 'express';
  * @example
  * ```typescript
  * import express from 'express';
- * import { init, userContextMiddleware } from '@outboundiq/express';
+ * import { init, userContextMiddleware } from '@outbound_iq/express';
  *
  * const app = express();
  *
@@ -56,7 +56,7 @@ declare function setRequestUserContext(req: Request, context: UserContext): void
 declare function getCurrentRequest(): Request | undefined;
 
 /**
- * @outboundiq/express
+ * @outbound_iq/express
  *
  * OutboundIQ SDK for Express.js applications.
  * Automatically tracks all outbound HTTP calls made from your Express app.
@@ -64,7 +64,7 @@ declare function getCurrentRequest(): Request | undefined;
  * @example
  * ```typescript
  * import express from 'express';
- * import { init, userContextMiddleware } from '@outboundiq/express';
+ * import { init, userContextMiddleware } from '@outbound_iq/express';
  *
  * const app = express();
  *
@@ -98,7 +98,7 @@ declare function getCurrentRequest(): Request | undefined;
  *
  * @example
  * ```typescript
- * import { init } from '@outboundiq/express';
+ * import { init } from '@outbound_iq/express';
  *
  * // Minimal setup
  * init({ apiKey: process.env.OUTBOUNDIQ_KEY });

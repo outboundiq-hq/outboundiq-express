@@ -1,5 +1,5 @@
 {
-  "name": "@outboundiq/express",
+  "name": "@outbound_iq/express",
   "version": "0.1.0",
   "description": "OutboundIQ SDK for Express.js - Automatic outbound API monitoring",
   "main": "./dist/index.js",

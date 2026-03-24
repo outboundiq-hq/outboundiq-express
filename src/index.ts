@@ -1,5 +1,5 @@
 /**
- * @outboundiq/express
+ * @outbound_iq/express
  * 
  * OutboundIQ SDK for Express.js applications.
  * Automatically tracks all outbound HTTP calls made from your Express app.
@@ -7,7 +7,7 @@
  * @example
  * ```typescript
  * import express from 'express';
- * import { init, userContextMiddleware } from '@outboundiq/express';
+ * import { init, userContextMiddleware } from '@outbound_iq/express';
  * 
  * const app = express();
  * 
@@ -85,7 +85,7 @@ import type { OutboundIQConfig } from '@outbound_iq/core';
  * 
  * @example
  * ```typescript
- * import { init } from '@outboundiq/express';
+ * import { init } from '@outbound_iq/express';
  * 
  * // Minimal setup
  * init({ apiKey: process.env.OUTBOUNDIQ_KEY });

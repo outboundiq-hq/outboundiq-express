@@ -69,7 +69,7 @@ function configureResolver(): void {
  * @example
  * ```typescript
  * import express from 'express';
- * import { init, userContextMiddleware } from '@outboundiq/express';
+ * import { init, userContextMiddleware } from '@outbound_iq/express';
  * 
  * const app = express();
  * 

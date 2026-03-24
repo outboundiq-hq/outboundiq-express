@@ -1,18 +1,18 @@
-# @outboundiq/express
+# @outbound_iq/express
 
 Express.js integration for OutboundIQ - Third-party API monitoring and analytics.
 
 ## Installation
 
 ```bash
-npm install @outboundiq/express
+npm install @outbound_iq/express
 ```
 
 ## Quick Start
 
 ```javascript
 const express = require('express');
-const { initExpress, userContextMiddleware } = require('@outboundiq/express');
+const { initExpress, userContextMiddleware } = require('@outbound_iq/express');
 
 const app = express();
 
@@ -65,7 +65,7 @@ app.use(userContextMiddleware()); // Add after auth middleware
 For webhooks or system operations:
 
 ```javascript
-const { setRequestUserContext } = require('@outboundiq/express');
+const { setRequestUserContext } = require('@outbound_iq/express');
 
 app.post('/webhook/stripe', (req, res) => {
   setRequestUserContext(req, {
