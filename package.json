@@ -34,6 +34,10 @@
   ],
   "author": "OutboundIQ",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outboundiq-hq/outboundiq-express.git"
+  },
   "dependencies": {
     "@outbound_iq/core": "^0.1.0"
   },
